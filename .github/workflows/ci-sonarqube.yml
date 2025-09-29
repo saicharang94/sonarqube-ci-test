@@ -21,14 +21,6 @@ jobs:
           role-to-assume: arn:aws:iam::004642588605:role/GitHubActions-SonarQube-CITest
           aws-region: ap-south-1
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-
-      - name: Install dependencies
-        run: npm install
-
       - name: Run SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v2
         env:
